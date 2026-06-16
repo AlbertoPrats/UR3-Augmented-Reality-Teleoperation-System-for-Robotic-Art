@@ -49,8 +49,7 @@ This framework yields massive potential for assistive accessibility (enabling in
 
 The system relies on a decentralized multi-device network layout designed to distribute computational loads. Because direct APIs do not exist to link Meta ecosystems with Universal Robots, an intermediary communication bridge was custom-developed.
 <p align="center">
-  
-  ![Communication Bridge](img/comms_bridge.png)
+  <img src="img/comms_bridge.png" alt="Communication Bridge Diagram" width="600">
 </p>
 
 
