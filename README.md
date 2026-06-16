@@ -1,4 +1,4 @@
-# UR3-Augmented-Reality-Teleoperation-System-for-Robotic-Art
+# UR3 Augmented Reality Teleoperation System for Robotic Art
 
 <p align="center">
   <img src="img/Title_img.png" alt="Augmented Reality Robotic Painter" width="600">
@@ -48,8 +48,10 @@ This framework yields massive potential for assistive accessibility (enabling in
 ## 📁 Code Architecture & Components
 
 The system relies on a decentralized multi-device network layout designed to distribute computational loads. Because direct APIs do not exist to link Meta ecosystems with Universal Robots, an intermediary communication bridge was custom-developed.
+<p align="center">
+  ![Communication Bridge](img/comms_bridge.png)
+</p>
 
-![Communication Bridge](img/comms_bridge.png)
 
 ### 🧠 Core Subsystems Breakdown:
 1. **AR Environment Side (PC 1)**: Runs the real-time Unity interface. It leverages the host PC’s hardware (CPU, GPU, RAM) rather than running standalone on the headset, dramatically improving processing power and speeding up code deployment via **Meta Horizon Link**.
