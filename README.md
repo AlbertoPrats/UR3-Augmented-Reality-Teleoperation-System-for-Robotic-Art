@@ -106,7 +106,6 @@ The UR3 tool center point (TCP) tool attachment must incorporate a passive compr
    python pc_server.py
 
 
-
 This system has been developed as a project in collaboration with Alejandro Sosa Viña and Miriam García de la Reina Padilla.
 
 Use of this code or structure is encouraged, with the right considerations stated below. Any additional work or use of the code must make reference to at least one of the authors.
