@@ -8,7 +8,7 @@
 
 ## 📊 Project Overview
 
-[![Project Type](https://img.shields.io/badge/Project-Robotics%20Capstone-blue.svg)](#)
+[![Project Type](https://img.shields.io/badge/Project-Robotic%20Teleoperation-blue.svg)](#)
 [![Unity Version](https://img.shields.io/badge/Unity-6000.2.10f1%20(6.2)-black.svg)](https://unity.com/)
 [![SDK](https://img.shields.io/badge/Meta%20XR-Core%20%26%20Interaction-lightgrey.svg)](https://developer.oculus.com/)
 [![Robot](https://img.shields.io/badge/Robot-UR3-red.svg)](https://www.universal-robots.com/)
@@ -44,6 +44,7 @@ This framework yields massive potential for assistive accessibility (enabling in
 * **Polyscope (Universal Robots)**: Compatible with CB3-Series controllers (optimized for `v3.15+`).
 * **Visual Studio Code**: (Recommended IDE for managing script updates and Python server execution).
 
+---
 
 ## 📁 Code Architecture & Components
 
