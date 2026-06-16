@@ -9,10 +9,10 @@
 ## 📊 Project Overview
 
 [![Project Type](https://img.shields.io/badge/Project-Robotic%20Teleoperation-blue.svg)](#)
-[![Unity Version](https://img.shields.io/badge/Unity-6000.2.10f1%20(6.2)-black.svg)](https://unity.com/)
-[![SDK](https://img.shields.io/badge/Meta%20XR-Core%20%26%20Interaction-lightgrey.svg)](https://developer.oculus.com/)
 [![Robot](https://img.shields.io/badge/Robot-UR3-red.svg)](https://www.universal-robots.com/)
-[![Protocol](https://img.shields.io/badge/Protocol-XML--RPC%20%2F%20TCP%2FIP-orange.svg)](#)
+[![Unity Version](https://img.shields.io/badge/Unity-6000.2.10f1%20(6.2)-green.svg)](https://unity.com/)
+[![Simulation](https://img.shields.io/badge/Simulation-Meta%20XR-orange.svg)](https://developer.oculus.com/)
+[![Protocol](https://img.shields.io/badge/Protocol-XML--RPC%20%2F%20TCP%2FIP-yellow.svg)](#)
 
 **AR Painter** is an advanced robotic teleoperation system that combines Augmented Reality (AR Class 2 Display) with collaborative robotics. Built as a final group project for the Bachelor's Degree in Robotic Engineering at the University of Alicante, the system allows users to sketch paths on a virtual 3D canvas using a **Meta Quest 3** headset. These hand-drawn air gestures are translated in real-time into spatial coordinates, causing a physical **Universal Robots UR3 collaborative arm** to replicate the artwork onto a real whiteboard.
 
