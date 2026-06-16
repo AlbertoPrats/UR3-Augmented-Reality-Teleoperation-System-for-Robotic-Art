@@ -1,0 +1,74 @@
+def XMLR_PC_vn():
+  step_count_59daff64_53ef_49f4_9012_71c8bb878f41 = 0.0
+  thread Step_Counter_Thread_20c61e31_3351_4b0b_89b8_d0c418ad3f83():
+    while (True):
+      step_count_59daff64_53ef_49f4_9012_71c8bb878f41 = step_count_59daff64_53ef_49f4_9012_71c8bb878f41 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_20c61e31_3351_4b0b_89b8_d0c418ad3f83()
+  set_tool_voltage(0)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 1)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_safety_mode_transition_hardness(1)
+  modbus_add_signal("127.0.0.1", 255, 128, 2, "offs_x_pos", False)
+  modbus_set_signal_update_frequency("offs_x_pos", 10)
+  modbus_add_signal("127.0.0.1", 255, 129, 2, "offs_x_neg", False)
+  modbus_set_signal_update_frequency("offs_x_neg", 10)
+  modbus_add_signal("127.0.0.1", 255, 130, 2, "offs_y_pos", False)
+  modbus_set_signal_update_frequency("offs_y_pos", 10)
+  modbus_add_signal("127.0.0.1", 255, 131, 2, "offs_y_neg", False)
+  modbus_set_signal_update_frequency("offs_y_neg", 10)
+  modbus_add_signal("127.0.0.1", 255, 132, 2, "offs_z_pos", False)
+  modbus_set_signal_update_frequency("offs_z_pos", 10)
+  modbus_add_signal("127.0.0.1", 255, 133, 2, "offs_z_neg", False)
+  modbus_set_signal_update_frequency("offs_z_neg", 10)
+  modbus_add_signal("127.0.0.1", 255, 135, 2, "rz_pos", False)
+  modbus_set_signal_update_frequency("rz_pos", 10)
+  modbus_add_signal("127.0.0.1", 255, 136, 2, "rz_neg", False)
+  modbus_set_signal_update_frequency("rz_neg", 10)
+  modbus_add_signal("127.0.0.1", 255, 134, 2, "command_home", False)
+  modbus_set_signal_update_frequency("command_home", 10)
+  set_tcp(p[0.0,-0.02,0.182,0.0,0.0,0.0])
+  set_payload(0.01, [0.0, 0.0, 0.0])
+  set_gravity([0.0, 0.0, 9.82])
+  global MB_pos=0
+  global MB_confirm=0
+  global MB_confirm_cin=False
+  global Pizarra2=p[0.17673396048645168,-0.5509820050475813,0.4596448717070466,1.6614019286213892,0.24015163630689224,-0.14219197699220343]
+  # begin: URCap Installation Node
+  #   Source: External Control, 1.0.5, FZI Research Center for Information Technology
+  #   Type: External Control
+  # end: URCap Installation Node
+  $ 1 "BeforeStart"
+  $ 2 "camera≔rpc_factory('xmlrpc','http://192.168.1.100:50000')"
+  global camera=rpc_factory("xmlrpc","http://192.168.1.100:50000")
+  while (True):
+    $ 3 "Robot Program"
+    $ 4 "decision≔0"
+    global decision=0
+    $ 5 "Loop decision!=-1"
+    while (decision!=-1):
+      $ 6 "decision≔camera.get_decision(1)"
+      global decision=camera.get_decision(1)
+      $ 7 "Loop decision>0"
+      while (decision>0):
+        $ 8 "next_pose≔camera.coord_parser()"
+        global next_pose=camera.coord_parser()
+        $ 9 "MoveL"
+        $ 10 "next_pose" "breakAfter"
+        set_tcp(p[0.0,-0.02,0.182,0.0,0.0,0.0])
+        movel(pose_trans(Pizarra2, next_pose), a=0.1, v=0.05, r=0.001)
+        $ 11 "decision≔decision-1"
+        global decision=decision-1
+      end
+    end
+    $ 12 "Halt"
+    halt
+  end
+end

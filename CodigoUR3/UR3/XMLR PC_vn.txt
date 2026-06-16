@@ -1,0 +1,13 @@
+ Program
+   BeforeStart
+     camera≔rpc_factory("xmlrpc","http://192.168.1.100:50000")
+   Robot Program
+     decision≔0
+     Loop decision!=-1
+       decision≔camera.get_decision(1)
+       Loop decision>0
+         next_pose≔camera.coord_parser()
+         MoveL
+           next_pose
+         decision≔decision-1
+     Halt
