@@ -1,0 +1,135 @@
+{
+    "version": 1,
+    "name": "Test",
+    "maps": [
+        {
+            "name": "XR",
+            "id": "21065f55-4b8f-4518-9f88-b8cd7fb4b796",
+            "actions": [
+                {
+                    "name": "Posicion",
+                    "type": "Value",
+                    "id": "3bf1f5a9-8fcd-4870-89e6-9488fc71d706",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotacion",
+                    "type": "Value",
+                    "id": "8308e0a1-4036-4d9a-a24d-38374118d160",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Gatillo",
+                    "type": "Button",
+                    "id": "2e1060be-389b-4d03-bd6c-eb9846d04b7a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Boton A",
+                    "type": "Button",
+                    "id": "efd6d420-8668-415d-9d28-a6dfa1b49cb2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Boton B",
+                    "type": "Button",
+                    "id": "6a3561e9-402e-4639-bce7-40a7fc0918ac",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Test",
+                    "type": "Button",
+                    "id": "76ba83ef-ae33-4bdc-9306-0144fd3aa19c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ca9bcdd6-586a-4d29-a9d7-e08b0c96b5c8",
+                    "path": "<XRController>{RightHand}/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Posicion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd4ea1d9-f783-44cf-910c-956ac1c3afbf",
+                    "path": "<XRController>/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotacion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ab8b5be-8a72-4ffb-bc7b-38a11079ed92",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "Hold(duration=0.4,pressPoint=0.2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gatillo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0913b58e-ff04-4f97-8b9d-76ef6adfaaab",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boton A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa490b71-a541-4084-b9df-b92b678d6830",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boton B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7fd1eef-e974-42bf-b126-b5d87e932d1e",
+                    "path": "<Keyboard>/#(1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
